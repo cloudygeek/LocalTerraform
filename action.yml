@@ -1,0 +1,14 @@
+# action.yaml
+name: 'Local Terraform Github Action'
+description: 'Attempts to convert terraform to a local only setup'
+inputs:
+  sourceRepo:
+    description: 'which repo has called'
+    required: true
+    default: 'testRepo'
+outputs:
+  result:
+    description: 'The result'
+runs:
+  using: 'node16'
+  main: 'index.js'
